@@ -16,60 +16,90 @@ p{
   color: gray;
 }
 .container{
-  max-width: 1000px;
+  max-width: 1200px;
   width: 90%;
   margin: 0 auto;
 }
-header{
-  margin: 20px 0;
+
+header .container {
   padding: 20px 0;
-  border-bottom: 1px solid #ccc;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid-container > *{
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.links {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 12px;
 }
 
-.grid-container{
-  margin: 50px 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+.links a {
+  text-decoration: none;
+  color: indigo;
+}
+article{
+  grid-column: span 3;
 }
 article img {
   width: 100%;
   border-radius: 5px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 article h2 {
   margin: 10px 0;
 }
-.featured-article{
-  grid-column: span 3;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  align-items: center;
+
+aside .post-info h4{
+  margin: 20px 0 10px;
 }
 
-@media screen and (max-width: 768px){
-  article{
-    grid-column: span 3;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    align-items: center;
-  }
-  .featured-article{
-    grid-template-columns:  1fr;
-  }
+footer .container {
+  padding: 20px 0;
+  border: 1px solid #ccc;
+  text-align: center;
 }
 
-@media screen and (max-width: 680px){
-  article{
-    grid-column: span 3;
-    display: block;
+@media screen and (max-width: 1000px) {
+  .categories{
+    grid-column: span 5;
   }
-  .featured-article{
-    grid-template-columns:  1fr;
+  .categories .links {
+    display: inline-block;
+  }
+  .categories .links a{
+    margin-right: 10px;
+  }
+  article{
+    grid-column: span 4;
+  }
+  /* .info-sidebar{
+    grid-column: span 1;
+  } */
+}
+
+@media screen and (max-width: 800px) {
+  .categories{
+    grid-column: span 5;
+  }
+  .categories .links {
+    display: inline-block;
+  }
+  .categories .links a{
+    margin-right: 10px;
+  }
+  article{
+    grid-column: span 5;
+  }
+  .info-sidebar{
+    grid-column: span 5;
   }
 }
