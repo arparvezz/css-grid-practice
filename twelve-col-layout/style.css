@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter;
+
+}
+h2, h3, h4, h5, h6{
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
+}
+p{
+  font-family: inter;
+  color: gray;
+}
+img{
+  width: 100%;
+}
+.container{
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 25px;
+}
+
+/* header */
+header{
+  padding: 25px 0;
+  border-bottom: 1px solid #efefef;
+}
+header .container .grid-container .logo{
+  grid-column: span 6;
+}
+header .container .grid-container nav{
+  grid-column: span 6;
+  justify-self: end;
+  display: flex;
+  gap: 20px;
+}
+header .container .grid-container nav a{
+  text-decoration: none;
+  color: black;
+}
+
+/* hero section */
+.hero-section{
+  margin: 50px 0;
+}
+.hero-section .container .grid-container{
+  align-items: center;
+}
+.hero-section .container .grid-container img{
+  grid-column: span 6;
+}
+.hero-section .container .grid-container .content{
+  padding: 30px;
+  grid-column: span 6;
+}
+
+/* service section */
+.service-section{
+  margin: 50px 0;
+}
+.service-section .container .grid-container .title{
+  grid-column: span 12;
+  text-align: center;
+}
+.service-section .container .grid-container .card{
+  grid-column: span 4;
+  padding: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
